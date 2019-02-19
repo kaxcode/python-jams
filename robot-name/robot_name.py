@@ -4,10 +4,11 @@ import string
 
 class Robot(object):
     def __init__(self, name=None):
-        if name is None:
-            name = self.generate_name()
-
-        self.name = self.generate_name()
+        if name:
+            self.name = name
+        else:
+            self.name = self.generate_name()
+            self.name = self.name[1] + self.name[0] + self.name[2:]
 
     def reset(self):
         self.name = self.generate_name()
