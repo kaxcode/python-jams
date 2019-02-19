@@ -14,5 +14,5 @@ class Robot(object):
 
     def generate_name(self):
         letters = ''.join(random.sample(string.ascii_uppercase, 2))
-        numbers = random.randrange(0, 999, 3)
-        return letters + str(numbers)
+        numbers = ''.join(random.sample(string.digits, 3))
+        return letters + numbers
