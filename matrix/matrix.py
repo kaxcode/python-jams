@@ -12,12 +12,8 @@ class Matrix(object):
         return self.matrix[index-1]
 
     def column(self, index):
-        empty_list = []
+        column_list = []
+        for item in self.matrix:
+            column_list.append(item[index-1])
 
-        for string in self.matrix:
-            list_of_lists = []
-            list_of_lists.append(string)
-            for item in list_of_lists:
-                empty_list.append(item[index-1])
-
-        return empty_list
+        return column_list
